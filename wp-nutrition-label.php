@@ -13,15 +13,16 @@ add_shortcode('wp-nutr-label', 'nutr_label_shortcode');
 
 /* attributes we look for:
  *    servingsize, servings, calories, totalfat, satfat, transfat, cholestrol, sodium, carbohydrates, fiber, sugars, protein
+ * also,
+ *    id, class
  */
 function nutr_label_shortcode($atts) {
   extract( shortcode_atts( array(), $atts ) );
-  
+  return nutr_label_generate(array());
 }
 
-function nutr_label_generate() {
-?>
-<div class='wp-nutrition-label'>
+function nutr_label_generate($args) {
+  return "<div ".($args{'id'} ? "id='".$args{'id'}."'" : "") . "class='wp-nutrition-label" . ( $args{'class'} ? " ".$args{'class'} : "") . "'>
   Nutrition Facts
   Serving Size XX
   Servings XX
@@ -61,5 +62,5 @@ function nutr_label_generate() {
    Calcium XX% &circle; Iron XX%
    <hr />
    * Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.
-</div>
-<?php } ?>
+</div>";
+} ?>

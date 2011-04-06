@@ -71,29 +71,29 @@ function nutr_label_generate($args) {
    <span class='alignright'>Calories from Fat YY</span>
    <hr />
    <strong class='alignright'>% Daily Value*</strong><br />
-   <strong>Total Fat XX</strong>
-   YY%
+   <span class='alignleft'><strong>Total Fat</strong> XXg</span>
+   <span class='alignright'>YY%</span>
    <hr />
-   <span class='indent'>Saturated Fat XX</span>
-   YY%
+   <span class='alignleft indent'>Saturated Fat XXg</span>
+   <span class='alignright'>YY%</span>
    <hr />
-   <span class='indent'>Trans Fat</span>
+   <span class='indent'>Trans Fat XXg</span>
    <hr />
-   <strong>Cholesterol</strong> XX
-   YY%
+   <span class='alignleft'><strong>Cholesterol</strong> XXmg</span>
+   <span class='alignright'>YY%</span>
    <hr />
-   <strong>Sodium</strong> XX
-   YY%
+   <span class='alignleft'><strong>Sodium</strong> XXmg</span>
+   <span class='alignright'>YY%</span>
    <hr />
-   <strong>Total Carbohydrate</strong> XX
-   YY%
+   <span class='alignleft'><strong>Total Carbohydrate</strong> XXg</span>
+   <span class='alignright'>YY%</span>
    <hr />
-   <span class='indent'>Dietary Fiber XX</span>
-   YY%
+   <span class='alignleft indent'>Dietary Fiber XXg</span>
+   <span class='alignright'>YY%</span>
    <hr />
-    <span class='indent'>Sugars XX</span>
+    <span class='indent'>Sugars XXg</span>
    <hr />
-   <strong>Protein</strong>XX
+   <strong>Protein</strong> XXg
    <hr class='heavy' />
    Vitamin A XX% &bullet; Vitamin C XX%
    <hr />

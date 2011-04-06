@@ -55,11 +55,28 @@ function nutr_style() {
  *    id, class
  */
 function nutr_label_shortcode($atts) {
-  extract( shortcode_atts( array(), $atts ) );
-  return nutr_label_generate(array());
+  $args = shortcode_atts( array(servingsize => 0,
+				 servings => 0,
+				 calories => 0,
+				 totalfat => 0,
+				 satfat => 0,
+				 transfat => 0,
+				 cholesterol => 0,
+				 sodium => 0,
+				 carbohydrates => 0,
+				 fiber => 0,
+				 sugars => 0,
+				 protein => 0,
+				vitamin_a => 0,
+				viamin_c => 0,
+				 id => '',
+				class => '' ), $atts );
+  return nutr_label_generate($args);
 }
 
 function nutr_label_generate($args) {
+  extract($args);
+
   return "<div ".($args{'id'} ? "id='".$args{'id'}."'" : "") . "class='wp-nutrition-label" . ( $args{'class'} ? " ".$args{'class'} : "") . "'>
   <h2>Nutrition Facts</h2>
   <span class='alignleft'>Serving Size XX</span>
@@ -100,5 +117,6 @@ function nutr_label_generate($args) {
    Calcium XX% &bullet; Iron XX%
    <hr />
    <span class='small'>* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</span>
+   <span class='small alignright'><a href='http://www.romkey.com/code/wp-nutrition-label'>wp-nutrition-label</a>
 </div>";
 } ?>

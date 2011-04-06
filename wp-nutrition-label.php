@@ -70,47 +70,47 @@ function nutr_label_shortcode($atts) {
 				vitamin_a => 0,
 				viamin_c => 0,
 				 id => '',
-				class => '' ), $atts );
+				cssclass => '' ), $atts );
   return nutr_label_generate($args);
 }
 
 function nutr_label_generate($args) {
-  extract($args);
+  extract($args, EXTR_PREFIX_ALL, 'nutr');
 
-  return "<div ".($args{'id'} ? "id='".$args{'id'}."'" : "") . "class='wp-nutrition-label" . ( $args{'class'} ? " ".$args{'class'} : "") . "'>
+  return "<div ".($nutri_id ? "id='".$nutri_id."'" : "") . "class='wp-nutrition-label" . ( $nutri_cssclass ? " ".$nutri_cssclass : "") . "'>
   <h2>Nutrition Facts</h2>
-  <span class='alignleft'>Serving Size XX</span>
-  <span class='alignright'>Servings XX</span>
+  <span class='alignleft'>Serving Size ".$nutr_servingsize."</span>
+  <span class='alignright'>Servings ".$nutr_servings."</span>
   <hr class='heavy' />
   <strong>Amount Per Serving</strong>
    <hr />
-   <span class='alignleft'>Calories XX</span>
-   <span class='alignright'>Calories from Fat YY</span>
+   <span class='alignleft'>Calories ".$nutr_calories."</span>
+   <span class='alignright'>Calories from Fat ".($nutr_totalfat * 9)."</span>
    <hr />
    <strong class='alignright'>% Daily Value*</strong><br />
-   <span class='alignleft'><strong>Total Fat</strong> XXg</span>
+   <span class='alignleft'><strong>Total Fat</strong> ".$nutr_totalfat."g</span>
    <span class='alignright'>YY%</span>
    <hr />
-   <span class='alignleft indent'>Saturated Fat XXg</span>
+   <span class='alignleft indent'>Saturated Fat ".$nutr_satfat."g</span>
    <span class='alignright'>YY%</span>
    <hr />
-   <span class='indent'>Trans Fat XXg</span>
+   <span class='indent'>Trans Fat ".$nutr_transfat."g</span>
    <hr />
-   <span class='alignleft'><strong>Cholesterol</strong> XXmg</span>
+   <span class='alignleft'><strong>Cholesterol</strong> ".$nutr_cholesterol."mg</span>
    <span class='alignright'>YY%</span>
    <hr />
-   <span class='alignleft'><strong>Sodium</strong> XXmg</span>
+   <span class='alignleft'><strong>Sodium</strong> ".$nutr_sodium."mg</span>
    <span class='alignright'>YY%</span>
    <hr />
-   <span class='alignleft'><strong>Total Carbohydrate</strong> XXg</span>
+   <span class='alignleft'><strong>Total Carbohydrate</strong> ".$nutr_carbohydrates."g</span>
    <span class='alignright'>YY%</span>
    <hr />
-   <span class='alignleft indent'>Dietary Fiber XXg</span>
+   <span class='alignleft indent'>Dietary Fiber ".$nutr_fiber."g</span>
    <span class='alignright'>YY%</span>
    <hr />
-    <span class='indent'>Sugars XXg</span>
+    <span class='indent'>Sugars ".$nutr_sugars."g</span>
    <hr />
-   <strong>Protein</strong> XXg
+   <strong>Protein</strong> ".$nutr_protein."g
    <hr class='heavy' />
    Vitamin A XX% &bullet; Vitamin C XX%
    <hr />

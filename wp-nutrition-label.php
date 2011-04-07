@@ -30,7 +30,7 @@ function nutr_style() {
     margin: 0px !important; 
   }
   .wp-nutrition-label hr.heavy {
-  height: 8px;
+  height: .8em;
   }
   .wp-nutrition-label h2 {
     font-size: 3em;
@@ -43,7 +43,7 @@ function nutr_style() {
     margin-left: 2em;
   }
   .wp-nutrition-label .small {
-    font-size: 10px;
+    font-size: .8em;
   }
 </style>
 <?php
@@ -69,6 +69,7 @@ function nutr_label_shortcode($atts) {
 				 protein => 0,
 				vitamin_a => 0,
 				viamin_c => 0,
+				width => 22,
 				 id => '',
 				cssclass => '' ), $atts );
   return nutr_label_generate($args);
@@ -93,7 +94,12 @@ function nutr_label_generate($args) {
 		   'calcium' => 1000,
 		   'iron' => 18 );
 
-  return "<div ".($nutri_id ? "id='".$nutri_id."'" : "") . "class='wp-nutrition-label" . ( $nutri_cssclass ? " ".$nutri_cssclass : "") . "'>
+  $style = '';
+  if($nutr_width != 22) {
+    $style = "style='width: ".$nutr_width."em; font-size: ".(($nutr_width/22)*.75)."em;'";
+  }
+
+  return "<div ".($nutri_id ? "id='".$nutri_id."'" : "") . ($style ? $style : "") . "class='wp-nutrition-label" . ( $nutri_cssclass ? " ".$nutri_cssclass : "") . "'>
   <h2>Nutrition Facts</h2>
   <span class='alignleft'>Serving Size ".$nutr_servingsize."</span>
   <span class='alignright'>Servings ".$nutr_servings."</span>

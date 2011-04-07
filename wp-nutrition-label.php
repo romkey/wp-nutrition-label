@@ -74,8 +74,24 @@ function nutr_label_shortcode($atts) {
   return nutr_label_generate($args);
 }
 
+function nutr_percentage($contains, $reference) {
+  return intval($contains/$reference*100);
+}
+
 function nutr_label_generate($args) {
   extract($args, EXTR_PREFIX_ALL, 'nutr');
+
+  $rda = array( 'totalfat' => 65,
+		   'satfat' => 20,
+		   'cholesterol' => 300,
+		   'sodium' => 2300,
+		   'carbohydrates' => 300,
+		   'fiber' => 25,
+		   'protein' => 50,
+		   'vitamin_a' => 5000,
+		   'vitamin_c' => 60,
+		   'calcium' => 1000,
+		   'iron' => 18 );
 
   return "<div ".($nutri_id ? "id='".$nutri_id."'" : "") . "class='wp-nutrition-label" . ( $nutri_cssclass ? " ".$nutri_cssclass : "") . "'>
   <h2>Nutrition Facts</h2>
@@ -87,30 +103,31 @@ function nutr_label_generate($args) {
    <span class='alignleft'>Calories ".$nutr_calories."</span>
    <span class='alignright'>Calories from Fat ".($nutr_totalfat * 9)."</span>
    <hr />
-   <strong class='alignright'>% Daily Value*</strong><br />
+   <div class='alignright'><strong>% Daily Value*</strong></div><div style='clear: both'></div>
    <span class='alignleft'><strong>Total Fat</strong> ".$nutr_totalfat."g</span>
-   <span class='alignright'>YY%</span>
+   <span class='alignright'>".nutr_percentage($nutr_totalfat, $rda['totalfat'])."%</span>
    <hr />
    <span class='alignleft indent'>Saturated Fat ".$nutr_satfat."g</span>
-   <span class='alignright'>YY%</span>
+   <span class='alignright'>".nutr_percentage($nutr_satfat, $rda['satfat'])."%</span>
    <hr />
    <span class='indent'>Trans Fat ".$nutr_transfat."g</span>
    <hr />
    <span class='alignleft'><strong>Cholesterol</strong> ".$nutr_cholesterol."mg</span>
-   <span class='alignright'>YY%</span>
+   <span class='alignright'>".nutr_percentage($nutr_cholesterol, $rda['cholesterol'])."%</span>
    <hr />
    <span class='alignleft'><strong>Sodium</strong> ".$nutr_sodium."mg</span>
-   <span class='alignright'>YY%</span>
+   <span class='alignright'>".nutr_percentage($nutr_sodium, $rda['sodium'])."%</span>
    <hr />
    <span class='alignleft'><strong>Total Carbohydrate</strong> ".$nutr_carbohydrates."g</span>
-   <span class='alignright'>YY%</span>
+   <span class='alignright'>".nutr_percentage($nutr_carbohydrates, $rda['carbohydrates'])."%</span>
    <hr />
    <span class='alignleft indent'>Dietary Fiber ".$nutr_fiber."g</span>
-   <span class='alignright'>YY%</span>
+   <span class='alignright'>".nutr_percentage($nutr_fiber, $rda['fiber'])."%</span>
    <hr />
     <span class='indent'>Sugars ".$nutr_sugars."g</span>
    <hr />
-   <strong>Protein</strong> ".$nutr_protein."g
+   <span class='alignleft'><strong>Protein</strong> ".$nutr_protein."g</span>
+   <span class='alignright'>".nutr_percentage($nutr_protein, $rda['protein'])."%</span>
    <hr class='heavy' />
    Vitamin A XX% &bullet; Vitamin C XX%
    <hr />

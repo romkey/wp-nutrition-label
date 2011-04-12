@@ -4,19 +4,45 @@ Donate link:
 Tags: food nutrition label
 Tested up to: 3.1.1
 Requires at least: 3.0
-Stable tag: 0.8
+Stable tag: 0.1
 
 == Description ==
 
-This plugin provides a Wordpress widget and shortcode which generate an FDA-style nutrition label.
+This plugin provides a Wordpress shortcode which generate an FDA-style nutrition label.
 
 See http://en.wikipedia.org/wiki/Nutrition_facts_label for more information on nutrition labels.
 
+Recommended daily intake values come from http://en.wikipedia.org/wiki/Reference_Daily_Intake
+
 == Installation ==
 
+1. Upload /wp-nutrition-label to the /wp-content/plugins directory
+
+2. Activate the plugin through the Plugins menu in WordPress
+
+3. In any posts or pages where you wish to insert a nutrition label, use the shortcode [nutr-label]. The shortcode accepts the following attributes:
+   servingsize, servings, calories, totalfat, satfat, transfat, cholesterol, sodium, carbohydrates, fiber, sugars, protein, id, class, width
+
+You should include the units with servingsize. servings and calories do not use units. totalfat, satfat, transfar, carbohydrates, fiber, sugars and protein all assume grams. cholesterol and sodium assume milligrams.
+
+id is optional and specifies a DOM ID for the div element containing the nutrition label. class adds an additional class identifier to the div element containing the nutrition label.
+
+width is an optional width in ems for the div containing the nutrition label. Its contents should automatically scale up or down but it is likely that the "Nutritional Facts" text will not scale appropriately.
+
 == Frequently Asked Questions ==
+
+1. How do I style the nutrition label?
+
+2. How do I contribute translations to other languages?
+
+You're welcome to email the .po and .mo files to me at wordpress [at] romkey [dot] com
+
+Alternately you can branch the plugin on github at https://github.com/romkey/wp-nutrition-label and let me know about your changes so that I can merge them back in.
+
+3. 
 
 == Screenshots ==
 
 == Changelog ==
 
+0.1	     initial release

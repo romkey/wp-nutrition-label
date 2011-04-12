@@ -97,6 +97,7 @@ function nutr_label_generate($args) {
 		   'calcium' => 1000,
 		   'iron' => 18 );
 
+  /* attempt to restyle the label */
   $style = '';
   if($nutr_width != 22) {
     $style = "style='width: ".$nutr_width."em; font-size: ".(($nutr_width/22)*.75)."em;'";

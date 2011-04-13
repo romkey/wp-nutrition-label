@@ -33,9 +33,9 @@ You can visit the official page for wp-nutrition-label at http://romkey.com/code
 * Unitless: servings and calories (units are implicit for calories)
 * You should include the unit in the serving size attribute (ie: "4 oz")
 
-= What about Fat Calories? =
+= What about **Calories from Fat**? =
 
-The **Fat Calories** number is computed from the totalfat attribute.
+The **Calories from Fat** number is computed from the totalfat attribute.
 
 = How do I style the nutrition label? =
 

@@ -12,7 +12,7 @@ Author URI: http://romkey.com/
 //	load_plugin_textdomain('your-unique-name','/wp-content/plugins/plugin-name/location-of-mo-po-files/');
 
 /* add_action('widgets_init', create_function('', 'return register_widget("NutriLabelWidget");')); */
-add_shortcode('nutri-label', 'nutr_label_shortcode');
+add_shortcode('nutr-label', 'nutr_label_shortcode');
 add_action('wp_head', 'nutr_style');
 
 function nutr_style() {
@@ -28,19 +28,20 @@ function nutr_style() {
  }
 
   .wp-nutrition-label hr {
-  color: black;
-  background-color: black;
+    color: black;
+    background-color: black;
     margin: 0px !important; 
   }
   .wp-nutrition-label hr.heavy {
-  height: .8em;
+    height: .8em;
   }
   .wp-nutrition-label h2 {
     font-size: 3em;
     font-weight: 900;
     margin: 0px !important;
-  line-height: 1em !important;
+    line-height: 1em !important;
     text-align: center;
+    background-color: none;
   }
   .wp-nutrition-label span.indent {
     margin-left: 2em;
@@ -70,11 +71,11 @@ function nutr_label_shortcode($atts) {
 				 fiber => 0,
 				 sugars => 0,
 				 protein => 0,
-				vitamin_a => 0,
-				viamin_c => 0,
-				width => 22,
+			 	 vitamin_a => 0,
+				 viamin_c => 0,
+				 width => 22,
 				 id => '',
-				cssclass => '' ), $atts );
+				 cssclass => '' ), $atts );
   return nutr_label_generate($args);
 }
 

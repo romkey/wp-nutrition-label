@@ -1,7 +1,6 @@
 === Plugin Name ===
-Contributers: romkey
-Donate link:
-Tags: food nutrition label
+Contributors: romkey
+Tags: food, nutrition, nutrition label, plugin
 Tested up to: 3.1.1
 Requires at least: 3.0
 Stable tag: 0.1
@@ -12,7 +11,9 @@ This plugin provides a Wordpress shortcode which generate an FDA-style nutrition
 
 See http://en.wikipedia.org/wiki/Nutrition_facts_label for more information on nutrition labels.
 
-Recommended daily intake values come from http://en.wikipedia.org/wiki/Reference_Daily_Intake
+Reference daily intake values come from http://en.wikipedia.org/wiki/Reference_Daily_Intake
+
+You can visit the official page for wp-nutrition-label at http://romkey.com/code/wp-nutrition-label
 
 == Installation ==
 
@@ -23,26 +24,34 @@ Recommended daily intake values come from http://en.wikipedia.org/wiki/Reference
 3. In any posts or pages where you wish to insert a nutrition label, use the shortcode [nutr-label]. The shortcode accepts the following attributes:
    servingsize, servings, calories, totalfat, satfat, transfat, cholesterol, sodium, carbohydrates, fiber, sugars, protein, id, class, width
 
-You should include the units with servingsize. servings and calories do not use units. totalfat, satfat, transfar, carbohydrates, fiber, sugars and protein all assume grams. cholesterol and sodium assume milligrams.
-
-id is optional and specifies a DOM ID for the div element containing the nutrition label. class adds an additional class identifier to the div element containing the nutrition label.
-
-width is an optional width in ems for the div containing the nutrition label. Its contents should automatically scale up or down but it is likely that the "Nutritional Facts" text will not scale appropriately.
-
 == Frequently Asked Questions ==
 
-1. How do I style the nutrition label?
+= What units do the attributes use? =
 
-2. How do I contribute translations to other languages?
+* Grams: totalfat, satfat, transfat, carbohydrates, fiber, sugars, protein
+* Milligrams (mg): cholesterol and sodium
+* Unitless: servings and calories (units are implicit for calories)
+* You should include the unit in the serving size attribute (ie: "4 oz")
+
+= How do I style the nutrition label? =
+
+You can control the width with the "width" attribute. The width attribute uses **ems** as its unit. It is styled to scale but it's likely that the "Nutrition Label" text won't scale well as the default font is Helvetica, which isn't fixed-width.
+
+You can specify the DOM ID of the enclosing **div** by setting the **id** attribute in the shortcode. You can also specify a CSS class by setting the **class** attribute. Then you can provide your own styling to change the label as you see fit.
+
+= How do I contribute translations to other languages? =
 
 You're welcome to email the .po and .mo files to me at wordpress [at] romkey [dot] com
 
-Alternately you can branch the plugin on github at https://github.com/romkey/wp-nutrition-label and let me know about your changes so that I can merge them back in.
+= Where can I find the development version of the plugin? =
 
-3. 
+Development work on this plugin is hosted on github at https://github.com/romkey/wp-nutrition-label
 
 == Screenshots ==
 
+tags/0.1/screenshot1.png /tags/0.1/screenshot2.png
+
 == Changelog ==
 
-0.1	     initial release
+= 0.1 =
+* Initial release

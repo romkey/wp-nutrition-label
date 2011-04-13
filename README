@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: romkey
-Tags: food, nutrition, nutrition label, plugin
+Tags: food, nutrition, nutrition label
 Tested up to: 3.1.1
 Requires at least: 3.0
 Stable tag: 0.1
@@ -36,6 +36,10 @@ You can visit the official page for wp-nutrition-label at http://romkey.com/code
 = What about **Calories from Fat**? =
 
 The **Calories from Fat** number is computed from the totalfat attribute.
+
+= What about vitamins? =
+
+Working on it.
 
 = How do I style the nutrition label? =
 

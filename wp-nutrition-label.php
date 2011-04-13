@@ -110,8 +110,8 @@ function nutr_percentage($contains, $reference) {
  */
 function nutr_label_generate($args) {
   extract($args, EXTR_PREFIX_ALL, 'nutr');
-  if($calories == 0) {
-    $calories = (($protein + $carbohydrates)*4) + ($fat * 9);
+  if($nutr_calories == 0) {
+    $nutr_calories = (($nutr_protein + $nutr_carbohydrates)*4) + ($nutr_totalfat * 9);
   }
 
   $rda = array( 'totalfat' => 65,

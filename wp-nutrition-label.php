@@ -139,10 +139,6 @@ function nutr_label_generate($args) {
    <hr />
    <span class='alignleft'><strong>".__("Protein")."</strong> ".$nutr_protein."g</span>
    <span class='alignright'>".nutr_percentage($nutr_protein, $rda['protein'])."%</span>
-   <hr class='heavy' />
-   Vitamin A XX% &bullet; Vitamin C XX%
-   <hr />
-   Calcium XX% &bullet; Iron XX%
    <hr />
    <span class='small'>* ".__("Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.")."</span>
    <span class='small alignright'><a href='http://www.romkey.com/code/wp-nutrition-label'>wp-nutrition-label</a>

@@ -34,11 +34,11 @@ function nutr_style() {
   .wp-nutrition-label hr.heavy {
     height: .8em;
   }
-  .wp-nutrition-label {
+  .wp-nutrition-label span.heading {
     font-size: 3em;
     font-weight: 900;
-    margin: 0px;
-    line-height: 1em;
+    margin: 0px !important;
+    line-height: 1em !important;
     text-align: center;
   }
   .wp-nutrition-label span.indent {
@@ -103,7 +103,7 @@ function nutr_label_generate($args) {
   }
 
   return "<div ".($nutri_id ? "id='".$nutri_id."'" : "") . ($style ? $style : "") . "class='wp-nutrition-label" . ( $nutri_cssclass ? " ".$nutri_cssclass : "") . "'>
-  <span>".__("Nutrition Facts")."</span>
+  <span class='heading'>".__("Nutrition Facts")."</span>
   <span class='alignleft'>".__("Serving Size")." ".$nutr_servingsize."</span>
   <span class='alignright'>".__("Servings")." ".$nutr_servings."</span>
   <hr class='heavy' />

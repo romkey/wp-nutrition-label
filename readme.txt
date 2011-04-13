@@ -57,7 +57,8 @@ Development work on this plugin is hosted on github at https://github.com/romkey
 
 == Screenshots ==
 
-tags/0.1/screenshot1.png /tags/0.1/screenshot2.png
+1. Example using the shortcode
+2. Example output
 
 == Upgrade Notice ==
 

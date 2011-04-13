@@ -3,7 +3,7 @@ Contributors: romkey
 Tags: food, nutrition, nutrition label
 Tested up to: 3.1.1
 Requires at least: 3.0
-Stable tag: 0.2
+Stable tag: 0.3
 
 == Description ==
 
@@ -68,6 +68,9 @@ Development work on this plugin is hosted on github at https://github.com/romkey
 2. Example output
 
 == Upgrade Notice ==
+
+= 0.3 =
+* Calculate calories from protein, carbohydrates and fat if no calories specified.
 
 = 0.2 =
 * Upgrade only needed to get info into plugin directory pages.

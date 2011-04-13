@@ -33,6 +33,10 @@ You can visit the official page for wp-nutrition-label at http://romkey.com/code
 * Unitless: servings and calories (units are implicit for calories)
 * You should include the unit in the serving size attribute (ie: "4 oz")
 
+= What about Fat Calories? =
+
+The **Fat Calories** number is computed from the totalfat attribute.
+
 = How do I style the nutrition label? =
 
 You can control the width with the "width" attribute. The width attribute uses **ems** as its unit. It is styled to scale but it's likely that the "Nutrition Label" text won't scale well as the default font is Helvetica, which isn't fixed-width.

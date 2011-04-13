@@ -3,18 +3,33 @@
 Plugin Name: wp-nutrition-label
 Plugin URI: http://romkey.com/code/wp-nutrition-label
 Description:  Provides a Wordpress shortcode which generate an FDA-style nutrition label.
+Text Domain: wp-nutrition-label
+Domain Path: /languages
 Author: John Romkey
-Version: 0.1
+Version: 0.3
 Author URI: http://romkey.com/
 */
 
-// if(!load_plugin_textdomain('your-unique-name','/wp-content/languages/'))
-//	load_plugin_textdomain('your-unique-name','/wp-content/plugins/plugin-name/location-of-mo-po-files/');
+
 
 /* add_action('widgets_init', create_function('', 'return register_widget("NutriLabelWidget");')); */
 add_shortcode('nutr-label', 'nutr_label_shortcode');
 add_action('wp_head', 'nutr_style');
+add_action('init', 'nutr_load_plugin_textdomain');
 
+/*
+ * Add local textdomain
+ */
+function nutr_load_plugin_textdomain() {
+  load_plugin_textdomain('wp-nutrition-label', false, 'wp-nutrition-label/languages/');
+}
+
+/*
+ * output our style sheet at the head of the file
+ * because it's brief, we just embed it rather than force an extra http fetch
+ *
+ * @return void
+ */
 function nutr_style() {
 ?>
 <style type='text/css'>
@@ -55,6 +70,9 @@ function nutr_style() {
  *    servingsize, servings, calories, totalfat, satfat, transfat, cholestrol, sodium, carbohydrates, fiber, sugars, protein
  * also,
  *    id, class
+ *
+ * @param array $atts
+ * @return string
  */
 function nutr_label_shortcode($atts) {
   $args = shortcode_atts( array(servingsize => 0,
@@ -77,12 +95,24 @@ function nutr_label_shortcode($atts) {
   return nutr_label_generate($args);
 }
 
+/*
+ * @param integer $contains
+ * @param integer $reference
+ * @return integer
+ */
 function nutr_percentage($contains, $reference) {
   return intval($contains/$reference*100);
 }
 
+/*
+ * @param array $args
+ * @return string
+ */
 function nutr_label_generate($args) {
   extract($args, EXTR_PREFIX_ALL, 'nutr');
+  if($nutr_calories == 0) {
+    $nutr_calories = (($nutr_protein + $nutr_carbohydrates)*4) + ($nutr_totalfat * 9);
+  }
 
   $rda = array( 'totalfat' => 65,
 		   'satfat' => 20,

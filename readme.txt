@@ -3,7 +3,7 @@ Contributors: romkey
 Tags: food, nutrition, nutrition label
 Tested up to: 3.1.1
 Requires at least: 3.0
-Stable tag: 0.2
+Stable tag: 0.3
 
 == Description ==
 
@@ -47,6 +47,12 @@ You can control the width with the "width" attribute. The width attribute uses *
 
 You can specify the DOM ID of the enclosing **div** by setting the **id** attribute in the shortcode. You can also specify a CSS class by setting the **class** attribute. Then you can provide your own styling to change the label as you see fit.
 
+= How about calculating the nutrition values based on a recipe? =
+
+This is **really** hard to do. To do it at all reliably requires human intervention to match ingredients names against their entries in a nutrition database. That's a level of difficulty I don't wan to try to tackle with this plugin. You may find the USDA's free online nutrition database useful for looking up nutrition information:
+
+http://www.nal.usda.gov/fnic/foodcomp/search/
+
 = How do I contribute translations to other languages? =
 
 You're welcome to email the .po and .mo files to me at wordpress [at] romkey [dot] com
@@ -58,9 +64,13 @@ Development work on this plugin is hosted on github at https://github.com/romkey
 == Screenshots ==
 
 1. Example using the shortcode
+
 2. Example output
 
 == Upgrade Notice ==
+
+= 0.3 =
+* Calculate calories from protein, carbohydrates and fat if no calories specified.
 
 = 0.2 =
 * Upgrade only needed to get info into plugin directory pages.

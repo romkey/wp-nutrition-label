@@ -19,14 +19,13 @@ function nutr_style() {
 ?>
 <style type='text/css'>
 .wp-nutrition-label {
-  border: 1px solid black;
-  font-family: helvetica, arial, sans-serif;
-  font-size: .75em;
-  width: 22em;
-  padding: 0em 1em 1em 1em;
-  line-height: 1.4em;
- }
-
+   border: 1px solid black;
+   font-family: helvetica, arial, sans-serif;
+   font-size: .75em;
+   width: 22em;
+   padding: 0em 1em 1em 1em;
+   line-height: 1.4em;
+  }
   .wp-nutrition-label hr {
     color: black;
     background-color: black;
@@ -35,13 +34,12 @@ function nutr_style() {
   .wp-nutrition-label hr.heavy {
     height: .8em;
   }
-  .wp-nutrition-label h2 {
+  .wp-nutrition-label h3 {
     font-size: 3em;
     font-weight: 900;
     margin: 0px !important;
     line-height: 1em !important;
     text-align: center;
-    background-color: none;
   }
   .wp-nutrition-label span.indent {
     margin-left: 2em;

@@ -3,7 +3,7 @@ Contributors: romkey
 Tags: food, nutrition, nutrition label
 Tested up to: 3.1.1
 Requires at least: 3.0
-Stable tag: 0.1
+Stable tag: 0.2
 
 == Description ==
 
@@ -59,7 +59,15 @@ Development work on this plugin is hosted on github at https://github.com/romkey
 
 tags/0.1/screenshot1.png /tags/0.1/screenshot2.png
 
+== Upgrade Notice ==
+
+= 0.2 =
+* Upgrade only needed to get info into plugin directory pages.
+
 == Changelog ==
+
+= 0.2 =
+* Changed filename from README to readme.txt
 
 = 0.1 =
 * Initial release

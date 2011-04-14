@@ -77,6 +77,9 @@ Development work on this plugin is hosted on github at https://github.com/romkey
 
 == Changelog ==
 
+= 0.3 =
+* Added code to help support internationalization, improved comments, calculate default total calories if not specified.
+
 = 0.2 =
 * Changed filename from README to readme.txt
 

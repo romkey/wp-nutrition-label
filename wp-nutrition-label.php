@@ -6,7 +6,7 @@ Description:  Provides a Wordpress shortcode which generate an FDA-style nutriti
 Text Domain: wp-nutrition-label
 Domain Path: /languages
 Author: John Romkey
-Version: 0.3
+Version: 0.4
 Author URI: http://romkey.com/
 */
 
@@ -45,6 +45,7 @@ function nutr_style() {
     color: black;
     background-color: black;
     margin: 0px !important; 
+    clear: both;
   }
   .wp-nutrition-label hr.heavy {
     height: .8em;

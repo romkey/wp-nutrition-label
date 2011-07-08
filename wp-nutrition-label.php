@@ -45,6 +45,7 @@ function nutr_style() {
     color: black;
     background-color: black;
     margin: 0px !important; 
+    clear: both;
   }
   .wp-nutrition-label hr.heavy {
     height: .8em;

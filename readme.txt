@@ -1,9 +1,15 @@
 === Plugin Name ===
 Contributors: romkey
 Tags: food, nutrition, nutrition label
+<<<<<<< HEAD
 Tested up to: 3.5.2
 Requires at least: 3.0
 Stable tag: 0.3.1
+=======
+Tested up to: 3.1.1
+Requires at least: 3.0
+Stable tag: 0.3
+>>>>>>> e2a8ad62d0a8e377511069be9aec51a2c7e480f0
 
 == Description ==
 

@@ -6,7 +6,7 @@ Description:  Provides a Wordpress shortcode which generate an FDA-style nutriti
 Text Domain: wp-nutrition-label
 Domain Path: /languages
 Author: John Romkey
-Version: 0.4
+Version: 0.3.1
 Author URI: http://romkey.com/
 */
 

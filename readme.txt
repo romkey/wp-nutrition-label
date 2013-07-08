@@ -1,9 +1,9 @@
 === Plugin Name ===
 Contributors: romkey
 Tags: food, nutrition, nutrition label
-Tested up to: 3.2
+Tested up to: 3.5.2
 Requires at least: 3.0
-Stable tag: 0.4
+Stable tag: 0.3.1
 
 == Description ==
 
@@ -69,10 +69,6 @@ Development work on this plugin is hosted on github at https://github.com/romkey
 
 == Upgrade Notice ==
 
-= 0.4 =
-* fix CSS problem where hr requires a clear: both
-* confirm that wp-nutrition-label works correctly with Wordpress 3.2
-
 = 0.3 =
 * Calculate calories from protein, carbohydrates and fat if no calories specified.
 
@@ -80,6 +76,9 @@ Development work on this plugin is hosted on github at https://github.com/romkey
 * Upgrade only needed to get info into plugin directory pages.
 
 == Changelog ==
+
+= 0.3 =
+* Added code to help support internationalization, improved comments, calculate default total calories if not specified.
 
 = 0.2 =
 * Changed filename from README to readme.txt
